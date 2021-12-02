@@ -2,9 +2,10 @@ const express = require("express");
 const path = require("path")
 const connect = require("./config/db");
 const Course = require("./models/course.model");
+require("dotenv").config()
 
 const app = express()
-const port = 8080;
+const port = process.env.PORT || 8080;
 app.use(express.json())
 //static files
 
